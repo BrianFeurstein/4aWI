@@ -23,7 +23,7 @@ let config = {
 function printWochentag() {
     for (i = 0; i < config.Wochentag.length; i++) {
 
-
+        console.log(config.Wochentag);
         //const i = config.month[day];
     }
     return console.log(config.Wochentag);;
