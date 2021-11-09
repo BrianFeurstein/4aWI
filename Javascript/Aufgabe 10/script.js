@@ -1,5 +1,6 @@
 let config = {
     startday: 4,
+    offset: 2,
     month: [
         { name: "Januar", day: 31 },
         { name: "Februar", day: 28 },
@@ -16,17 +17,34 @@ let config = {
     ],
     Wochentag: ["MO", "DI", "MI", "DO", "FR", "SA", "SO"]
 
+
+
 }
 
 
 
 function printWochentag() {
-    for (i = 0; i < config.Wochentag.length; i++) {
 
-        console.log(config.Wochentag);
-        //const i = config.month[day];
-    }
-    return console.log(config.Wochentag);;
+    console.log("| " + config.Wochentag.join(" | ")); //Mo-So
 
 }
-printWochentag();
+
+
+function printMonth() {
+
+    for (let p = 0; p < 12; p++) {
+
+        console.log(printweekdays());
+
+    }
+}
+
+function printweekdays() {
+    let b = config.month.day[i];
+    for (let i = 1; i <= config.month[].day; i++) {
+
+        console.log("| " + i);
+    }
+}
+
+printMonth();
