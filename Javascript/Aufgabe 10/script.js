@@ -33,17 +33,22 @@ function printWochentag() {
 function printMonth() {
 
     for (let p = 0; p < 12; p++) {
+        printWochentag();
 
-        console.log(printweekdays());
+        let example = "";
+        for (let i = 1; i <= config.month[p].day; i++) {
 
-    }
-}
+            let f = i;
+            example += "| " + f;
 
-function printweekdays() {
-    let b = config.month.day[i];
-    for (let i = 1; i <= config.month[].day; i++) {
-
-        console.log("| " + i);
+            if (i % 7 == 0) {
+                console.log(example + "\n");
+                example = "";
+            } else if (i == config.month[p].day) {
+                console.log(example + "\n");
+                example = "";
+            }
+        }
     }
 }
 
