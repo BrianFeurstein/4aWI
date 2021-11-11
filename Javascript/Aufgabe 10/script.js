@@ -1,6 +1,5 @@
 let config = {
-    startday: 4,
-    offset: 2,
+    offset: 1,
     month: [
         { name: "Januar", day: 31 },
         { name: "Februar", day: 28 },
@@ -25,7 +24,7 @@ let config = {
 
 function printWochentag() {
 
-    console.log("| " + config.Wochentag.join(" | ")); //Mo-So
+    console.log(" | " + config.Wochentag.join(" | ")); //Mo-So
 
 }
 
@@ -34,22 +33,42 @@ function printMonth() {
 
     for (let p = 0; p < 12; p++) {
         printWochentag();
-
         let example = "";
+        offset(config.offset, example, p);
+
+
+
         for (let i = 1; i <= config.month[p].day; i++) {
 
-            let f = i;
-            example += "| " + f;
+
+            example += " | " + i;
 
             if (i % 7 == 0) {
-                console.log(example + "\n");
+                console.log(example);
                 example = "";
+
             } else if (i == config.month[p].day) {
-                console.log(example + "\n");
+                console.log(example);
                 example = "";
             }
         }
     }
+
+}
+
+function offset(offset, example, p) {
+
+    for (i = 0; i < offset; i++) {
+        console.log(" |");
+    }
+
+    if ((offset + config.month[p].day % 7) < 7) {
+
+    } else {
+
+    }
+
+
 }
 
 printMonth();
