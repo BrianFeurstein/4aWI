@@ -53,7 +53,6 @@ function printMonth() {
             }
         }
     }
-
 }
 
 
@@ -70,18 +69,9 @@ function offset(p) {
 
     let offset = "";
     for (i = 1; i <= config.offset; i++) {
-        offset += "-";
+        offset += " | - |";
     }
     console.log(offset);
-
-    // if ((offset + config.month[p].day % 7) < 7) {
-
-
-
-
-    //} else {
-
-    //}
 
 
 }
