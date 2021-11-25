@@ -23,7 +23,7 @@ let config = {
 
 
 function printWochentag() {
-
+    console.log("------------------------------");
     console.log("|" + config.Wochentag.join("|")); //Mo-So
 
 }
