@@ -4,7 +4,14 @@ document.getElementById("taskList").innerHTML = TasksBreak();
 
 
 document.getElementById("generateTask").addEventListener("click", function() {
-    alert("add task")
+
+    addTasks();
+});
+
+document.getElementById("addInputfield").addEventListener("click", function() {
+
+    newBox();
+
 });
 
 function TasksBreak() {
@@ -15,4 +22,14 @@ function TasksBreak() {
     });
 
     return html;
+}
+
+function newBox() {
+    var newInput = document.createElement("input");
+    document.getElementById("control").appendChild(newInput);
+}
+
+function addTasks() {
+    var inputTask = document.querySelector("#txtNewTask").value;
+
 }
