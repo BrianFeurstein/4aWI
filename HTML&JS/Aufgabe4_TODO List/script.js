@@ -1,35 +1,26 @@
-const tasks = ["spielen", "tanzen", "singen"];
-
-document.getElementById("taskList").innerHTML = TasksBreak();
-
-
-document.getElementById("generateTask").addEventListener("click", function() {
-
-    addTasks();
-});
-
 document.getElementById("addInputfield").addEventListener("click", function() {
 
-    newBox();
+    newInputField();
 
 });
 
-function TasksBreak() {
-    let html = "";
-    tasks.forEach(element => {
-        html += "<li>" + element + "</li>";
+document.getElementById("deleteInputfields").addEventListener("click", function() {
+    deleteInputfields();
+});
 
-    });
+document.getElementById("addToCart").addEventListener("click", function() {
+    addToCart();
+});
 
-    return html;
+function addToCart() {
+
 }
 
-function newBox() {
+function deleteInputfields() {
+    document.getElementById("inputfields").innerHTML = "";
+}
+
+function newInputField() {
     var newInput = document.createElement("input");
-    document.getElementById("control").appendChild(newInput);
-}
-
-function addTasks() {
-    var inputTask = document.querySelector("#txtNewTask").value;
-
+    document.getElementById("inputfields").appendChild(newInput);
 }
