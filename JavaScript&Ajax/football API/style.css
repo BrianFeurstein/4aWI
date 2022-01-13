@@ -1,0 +1,26 @@
+    .headline {
+        position: absolute;
+        width: 1347px;
+        height: 115px;
+        left: 40px;
+        top: 49px;
+        background-color: #7BAD73;
+        margin-left: 40px;
+        font-family: Castellar;
+        font-size: 40px;
+    }
+    
+    h1 {
+        position: relative;
+        margin-top: 15px;
+        width: 1347px;
+        height: 115px;
+        text-align: center;
+    }
+    
+    body {
+        background-image: url("backgroundimage.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
+    }
