@@ -1,4 +1,4 @@
-import Remote from './Remote.js';
+
 
 export default class Battery {
     constructor(status) {
